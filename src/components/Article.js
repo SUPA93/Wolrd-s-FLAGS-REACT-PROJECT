@@ -19,8 +19,10 @@ const Article = ({article}) => {
             <em>Posté le {dateFormater(article.date)}</em>
             </div>
             <p>{article.content}</p>
-            <button className='btn-container'>Editer</button>
-            <button className='btn-container'>Supprimer</button>
+            <div className='btn-container'>
+            <button className='button'>Editer</button>
+            <button className='button'>Supprimer</button>
+            </div>
         </div>
     );
 };
