@@ -45,20 +45,24 @@ const Blog = () => {
             <h1>Blog</h1>
 
             <form onSubmit={(e) => handleSubmit(e)}>
-                <input 
-                type="text" 
-                placeholder="Nom" 
-                onChange={(e) => setAuthor(e.target.value)}
-                value={author}
+                <input
+                    type="text"
+                    placeholder="Nom"
+                    onChange={(e) => setAuthor(e.target.value)}
+                    value={author}
                 />
                 <textarea
                     style={{ border: error ? "1px solid red" : "1px solid #61dafb" }}
-                    placeholder="Message" 
+                    placeholder="Message"
                     onChange={(e) => setContent(e.target.value)}
                     value={content}
                 ></textarea>
                 {error && <p>Minimum de 140 caractères recquis!</p>}
                 <input type="submit" value="Envoyer" />
+                <h3>❗Cette partie nécessite une db.json en local❗</h3>
+                <img style={{ display: 'block', margin: 'auto', maxWidth: '100%', height: 'auto' }} src="./blogcapture.PNG" alt="capture d'article du blog" />
+
+                <h4 style={{ color: 'blue' }}>exemple d'article contenu dans le blog</h4>
             </form>
             <ul>
                 {blogData
@@ -70,4 +74,5 @@ const Blog = () => {
         </div>
     );
 };
+
 export default Blog;

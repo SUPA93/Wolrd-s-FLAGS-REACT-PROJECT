@@ -26,7 +26,8 @@ $white: rgb(243, 243, 243);
 body {
   background: $white;
   font-family: $font-1;
-  // @include verticalCenter;
+  padding: 10px;
+  text-align: center;
 }
 li {
   list-style-type: none;
